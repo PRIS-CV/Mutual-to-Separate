@@ -38,6 +38,8 @@ please cite:
 }
 ```
 
+## Reference codes
+**https://github.com/thuml/easydl**
 
 ## Contact
 - changdongliang@bupt.edu.cn

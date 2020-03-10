@@ -1,6 +1,6 @@
 # Mind the Gap: Enlarging the Domain Gap in Open Set Domain Adaptation
 
-Code release for Mind the Gap: Enlarging the Domain Gap in Open Set Domain Adaptation
+Code release for Mind the Gap: Enlarging the Domain Gap in Open Set Domain Adaptation [ArXiv](https://arxiv.org/abs/2003.03787 "ArXiv")
 
 ## Dataset
 ### OFFICE-Home
@@ -25,3 +25,20 @@ Code release for Mind the Gap: Enlarging the Domain Gap in Open Set Domain Adapt
 - Train: `python office_home_ResNet.py  "Art"   "Clipart" "0" "A_C" 0.2 0.2`
 - Description : PyTorch Open-set OFFICE-HOME Training with ResNet50 (PRE-TRAINED WITH IMAGENET).
 
+## Citation
+please cite:
+```
+@misc{chang2020mind,
+    title={Mind the Gap: Enlarging the Domain Gap in Open Set Domain Adaptation},
+    author={Dongliang Chang and Aneeshan Sain and Zhanyu Ma and Yi-Zhe Song and Jun Guo},
+    year={2020},
+    eprint={2003.03787},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+```
+
+
+## Contact
+- changdongliang@bupt.edu.cn
+- mazhanyu@bupt.edu.cn

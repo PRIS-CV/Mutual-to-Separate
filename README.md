@@ -22,7 +22,7 @@ Code release for Mind the Gap: Enlarging the Domain Gap in Open Set Domain Adapt
 ## Training
 
 - Download datasets
-- Train: `python office_home_ResNet.py  "Art"   "Clipart" "0" "A_C" 0.2 0.2`
+- Train: `python Office_Home.py  "Art"   "Clipart" "0" "A_C" 0.2 0.2`
 - Description : PyTorch Open-set OFFICE-HOME Training with ResNet50 (PRE-TRAINED WITH IMAGENET).
 
 ## Citation

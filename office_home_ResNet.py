@@ -509,48 +509,43 @@ while k <3000:
             clear_output()
     print(k)
 
-max_monitor_os = 0
-max_monitor_os_star = 0     
-with TrainingModeManager([feature_extractor_fix,feature_extractor_nofix, cls_down,cls_upper], train=False) \
-                            as mgr, Accumulator(['predict_prob','predict_index', 'label']) as accumulator:
-    for (i, (im, label)) in enumerate(target_test.generator()):
+    with TrainingModeManager([feature_extractor_fix,feature_extractor_nofix, cls_down,cls_upper], train=False) \
+                                as mgr, Accumulator(['predict_prob','predict_index', 'label']) as accumulator:
+        for (i, (im, label)) in enumerate(target_test.generator()):
 
-        im = Variable(torch.from_numpy(im), volatile=True).cuda()
-        label = Variable(torch.from_numpy(label), volatile=True).cuda()
+            im = Variable(torch.from_numpy(im), volatile=True).cuda()
+            label = Variable(torch.from_numpy(label), volatile=True).cuda()
 
 
-        ft1, feature_target, __, predict_prob = net_down.forward(im)
+            ft1, feature_target, __, predict_prob = net_down.forward(im)
 
-        p1_upper = discriminator_p.forward(ft1)
-        p2_upper = torch.sum(p1_upper, dim = -1).detach()
-
-
-        predict_prob, label = [variable_to_numpy(x) for x in (predict_prob,label)]
-        label = np.argmax(label, axis=-1).reshape(-1, 1)
-        predict_index = np.argmax(predict_prob, axis=-1).reshape(-1, 1)
-        accumulator.updateData(globals())
-        # if i % 10 == 0:
-        #     print(i)
-
-for x in accumulator.keys():
-    globals()[x] = accumulator[x]
-
-y_true = label.flatten()
-y_pred = predict_index.flatten()
-m = extended_confusion_matrix(y_true, y_pred, true_labels=list(range(25))+list(range(25,65)), pred_labels=list(range(26)))
+            p1_upper = discriminator_p.forward(ft1)
+            p2_upper = torch.sum(p1_upper, dim = -1).detach()
 
 
-cm = m
-cm = cm.astype(np.float) / np.sum(cm, axis=1, keepdims=True)
-acc_os_star = sum([cm[i][i] for i in range(25)]) / 25
-acc_os = (acc_os_star * 25 + sum([cm[i][25] for i in range(25, 65)]) / 40) / 26
-#unk = sum([cm[i][25] for i in range(25, 65)]) / 40
+            predict_prob, label = [variable_to_numpy(x) for x in (predict_prob,label)]
+            label = np.argmax(label, axis=-1).reshape(-1, 1)
+            predict_index = np.argmax(predict_prob, axis=-1).reshape(-1, 1)
+            accumulator.updateData(globals())
+            # if i % 10 == 0:
+            #     print(i)
 
-print("acc_os, acc_os_star, unk==",acc_os, acc_os_star, sum([cm[i][25] for i in range(25, 65)]) / 40)
+    for x in accumulator.keys():
+        globals()[x] = accumulator[x]
 
-OS_results = {"OS":acc_os, "acc_os_star":acc_os_star,"loss_MSE_value" : loss_MSE_value, "three_domain_loss_value" : three_domain_loss_value}
-f = open(store_name+".txt","a")
-f.write(str(OS_results)+",")
-f.close()
+    y_true = label.flatten()
+    y_pred = predict_index.flatten()
+    m = extended_confusion_matrix(y_true, y_pred, true_labels=list(range(25))+list(range(25,65)), pred_labels=list(range(26)))
+
+
+    cm = m
+    cm = cm.astype(np.float) / np.sum(cm, axis=1, keepdims=True)
+    acc_os_star = sum([cm[i][i] for i in range(25)]) / 25
+    acc_os = (acc_os_star * 25 + sum([cm[i][25] for i in range(25, 65)]) / 40) / 26
+    #unk = sum([cm[i][25] for i in range(25, 65)]) / 40
+
+    print("acc_os, acc_os_star, unk==",acc_os, acc_os_star, sum([cm[i][25] for i in range(25, 65)]) / 40)
+
+
 
 

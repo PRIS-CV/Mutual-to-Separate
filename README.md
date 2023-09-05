@@ -5,7 +5,7 @@ Code release for Mind the Gap: Enlarging the Domain Gap in Open Set Domain Adapt
 ## Dataset
 ### OFFICE-Home
 
-## Requirements
+## Requirements 
 
 - python 3.6
 - PyTorch 1.1.0

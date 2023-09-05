@@ -5,7 +5,8 @@ from torch.autograd.variable import *
 from torchvision import models
 import os
 import numpy as np
-from utilities import *
+from utilities import * 
+
 
 class BaseFeatureExtractor(nn.Module):
     def forward(self, *input):

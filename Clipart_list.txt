@@ -1,6 +1,6 @@
 /home/changdongliang/data/OfficeHomeDataset_10072016/Clipart/Alarm_Clock/00032.jpg  0
 /home/changdongliang/data/OfficeHomeDataset_10072016/Clipart/Alarm_Clock/00019.jpg  0
-/home/changdongliang/data/OfficeHomeDataset_10072016/Clipart/Alarm_Clock/00052.jpg  0
+/home/changdongliang/data/OfficeHomeDataset_10072016/Clipart/Alarm_Clock/00052.jpg  0 
 /home/changdongliang/data/OfficeHomeDataset_10072016/Clipart/Alarm_Clock/00056.jpg  0
 /home/changdongliang/data/OfficeHomeDataset_10072016/Clipart/Alarm_Clock/00014.jpg  0
 /home/changdongliang/data/OfficeHomeDataset_10072016/Clipart/Alarm_Clock/00053.jpg  0

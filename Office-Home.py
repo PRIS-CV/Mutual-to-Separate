@@ -6,7 +6,7 @@ import numpy as np
 
 def skip(data, label, is_train):
     return False
-batch_size = 16
+batch_size = 16 
 
 
 import sys

@@ -1,6 +1,6 @@
-# Mind the Gap: Enlarging the Domain Gap in Open Set Domain Adaptation
+# Mind the Gap: Open Set Domain Adaptation via Mutual-to-Separate Framework
 
-Code release for Mind the Gap: Enlarging the Domain Gap in Open Set Domain Adaptation [ArXiv](https://arxiv.org/abs/2003.03787 "ArXiv")
+Code release for Mind the Gap: Open Set Domain Adaptation via Mutual-to-Separate Framework [TCSVT 2023]
 
 ## Dataset
 ### OFFICE-Home
@@ -28,6 +28,18 @@ Code release for Mind the Gap: Enlarging the Domain Gap in Open Set Domain Adapt
 
 ## Reference codes
 **https://github.com/thuml/easydl**
+
+
+## Citation
+If you find this paper useful in your research, please consider citing:
+```
+@ARTICLE{9005389, 
+author={Dongliang Chang, Aneeshan Sain, Zhanyu Ma, Yi-Zhe Song, Ruiping Wang, and Jun Guo}, 
+journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
+title={Mind the Gap: Open Set Domain Adaptation via Mutual-to-Separate Framework}, 
+year={2023},
+doi={10.1109/TCSVT.2023.3326862}} 
+```
 
 ## Contact
 - changdongliang@bupt.edu.cn

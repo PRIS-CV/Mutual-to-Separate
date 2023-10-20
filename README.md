@@ -33,7 +33,7 @@ Code release for Mind the Gap: Open Set Domain Adaptation via Mutual-to-Separate
 ## Citation
 If you find this paper useful in your research, please consider citing:
 ```
-@ARTICLE{9005389, 
+@ARTICLE{chang_Mind, 
 author={Dongliang Chang, Aneeshan Sain, Zhanyu Ma, Yi-Zhe Song, Ruiping Wang, and Jun Guo}, 
 journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
 title={Mind the Gap: Open Set Domain Adaptation via Mutual-to-Separate Framework}, 
